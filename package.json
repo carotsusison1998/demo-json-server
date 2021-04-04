@@ -1,0 +1,26 @@
+{
+  "name": "fakeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js",
+    "start": "npm run-script generate-data && node main.js",
+    "generate-data": "node generate-data.js"
+  },
+  "keywords": [
+    "json",
+    "server"
+  ],
+  "author": "Duy",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.16.3",
+    "query-string": "^7.0.0"
+  },
+  "devDependencies": {
+    "faker": "^5.5.2",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,40 @@
+@url = http://localhost:3000/api
+@resource = products
+
+# get all
+GET {{url}}/{{resource}}
+
+
+### 
+#============================== get detail
+# GET {{url}}/{{resource}}/?_sort=price&_order=asc&price_gte=100&price_lte=200
+# GET {{url}}/{{resource}}/?_expand=categories
+# GET {{url}}/{{resource}}/UZ_ZRQg
+GET {{url}}/{{resource}}?_page=4&_limit=3
+
+###
+POST {{url}}/{{resource}}
+Content-Type: application/json
+
+{
+    "categogyId": "8ffffa7a-d9f4-4972-8865-f9d9f7d40af1",
+    "name": "Practical Metal Hat",
+    "price": 306,
+    "color": "lavender new",
+    "material": "Rubber new",
+    "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"}
+
+###
+PATCH  {{url}}/{{resource}}/UZ_ZRQg
+Content-Type: application/json
+
+{
+    "categogyId": "8ffffa7a-d9f4-4972-8865-f9d9f7d40af1",
+    "name": "Practical Metal Hat",
+    "price": 350,
+    "color": "lavender new update",
+    "material": "Rubber new update",
+    "description": "Andy shoes are designed to keeping in mind durability as"
+}
+###
+DELETE {{url}}/{{resource}}/87eeac16-48a1-4a4e-8cf5-ac84d7e229cs3
